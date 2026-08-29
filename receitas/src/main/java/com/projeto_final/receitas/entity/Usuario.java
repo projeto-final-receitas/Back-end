@@ -11,12 +11,14 @@ import java.io.Serializable;
 @Entity
 @Table(name = "tb_usuario")
 @Inheritance(strategy = InheritanceType.JOINED)
+
 public class Usuario implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nome;
-    private String login;
-    private String senha;
+    private String name;
+    @Column(unique = true)
+    private String email;
+    private String password;
 }
 
