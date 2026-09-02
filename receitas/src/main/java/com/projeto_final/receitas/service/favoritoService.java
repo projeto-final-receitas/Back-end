@@ -6,12 +6,10 @@ import com.projeto_final.receitas.entity.Usuario;
 import com.projeto_final.receitas.exception.businessException;
 import com.projeto_final.receitas.exception.resourceNotFoundException;
 import com.projeto_final.receitas.repository.*;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.*;
 import java.util.List;
 
 @Service

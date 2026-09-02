@@ -1,5 +1,6 @@
 package com.projeto_final.receitas.entity;
 
+<<<<<<< HEAD
 import jakarta.persistence.*;
 import lombok.*;
 import java.io.Serializable;

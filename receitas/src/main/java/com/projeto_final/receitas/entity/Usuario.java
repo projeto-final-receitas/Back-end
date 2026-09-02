@@ -5,6 +5,10 @@ import lombok.*;
 import java.io.*;
 import java.util.*;
 
+<<<<<<< HEAD
+=======
+@NoArgsConstructor
+>>>>>>> origin/usuarios
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 @Setter
@@ -16,6 +20,7 @@ public class Usuario implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+<<<<<<< HEAD
     private String nome;
     private String login;
     private String senha;

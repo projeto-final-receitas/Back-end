@@ -32,6 +32,7 @@ public class Receita {
     @Column(name = "url")
     private String img;
 
+
     @OneToMany(mappedBy = "receita", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Favorito> favoritadaPor = new ArrayList<>();
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.projeto_final.receitas.entity;
 
 import com.projeto_final.receitas.ChaveComposta.FavoritoId;

@@ -1,6 +1,7 @@
 package com.projeto_final.receitas.controller;
 
 import com.projeto_final.receitas.entity.Usuario;
+<<<<<<< HEAD
 import com.projeto_final.receitas.service.*;
 =======
 import com.projeto_final.receitas.service.UsuarioService;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+<<<<<<< HEAD
 @RequestMapping(value = "/usuario")
 public class UsuarioController {
     @Autowired
