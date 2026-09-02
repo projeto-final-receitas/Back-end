@@ -8,5 +8,8 @@ import java.util.Optional;
 
 @Repository
 public interface receitaRepository extends JpaRepository<Receita, Long> {
+<<<<<<< HEAD
     Optional<Receita> findByNome(String nome);
+=======
+>>>>>>> origin/usuarios
 }

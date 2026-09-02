@@ -10,7 +10,10 @@ import java.util.Optional;
 
 @Service
 public class receitasService {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/usuarios
     @Autowired
     private receitaRepository repository;
 
@@ -23,6 +26,7 @@ public class receitasService {
     public List<Receita> getall(){
         return repository.findAll();
     }
+<<<<<<< HEAD
     public Receita getById(Long id) {
         return repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Receita não encontrada"));
@@ -31,6 +35,9 @@ public class receitasService {
         return repository.findByNome(nome)
                 .orElseThrow(() -> new RuntimeException("Receita não encontrada"));
     }
+=======
+
+>>>>>>> origin/usuarios
     public Receita update(Receita obj) {
 
         Receita newObj = repository.findById(obj.getId())
@@ -59,6 +66,9 @@ public class receitasService {
             newObj.setImg(obj.getImg());
         }
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/usuarios
 }

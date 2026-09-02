@@ -15,6 +15,14 @@ public class AdministradorController {
     @Autowired
 
     private AdministradorService service;
+=======
+    private final AdministradorService service;
+
+    @Autowired
+    public AdministradorController(AdministradorService service) {
+        this.service = service;
+    }
+>>>>>>> origin/usuarios
 
     @PostMapping
     public ResponseEntity<Administrador> create(@RequestBody Administrador obj) {
