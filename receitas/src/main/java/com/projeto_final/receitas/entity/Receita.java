@@ -2,11 +2,13 @@ package com.projeto_final.receitas.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.engine.internal.Cascade;
+
+import java.util.*;
 
 @Entity
 @Table(name = "receita")
 @AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
@@ -26,8 +28,22 @@ public class Receita {
     private String desc;
 
     @Column(name = "tempo", nullable = false)
-    private int tempo;
+    private Integer tempo;
 
     @Column(name = "url", nullable = false)
     private String img;
+
+
+    @OneToMany(mappedBy = "receita", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Favorito> favoritadaPor = new ArrayList<>();
+
+    public Receita(){}
+
+    public List<Favorito> getFavoritadaPor() {
+        return favoritadaPor;
+    }
+    public void setFavoritadaPor(ArrayList<Favorito> favoritadaPor) {
+        this.favoritadaPor = favoritadaPor;
+    }
+
 }

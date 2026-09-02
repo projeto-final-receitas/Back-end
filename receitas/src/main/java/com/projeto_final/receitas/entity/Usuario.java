@@ -2,7 +2,9 @@ package com.projeto_final.receitas.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import java.io.Serializable;
+import java.io.*;
+import java.util.*;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
@@ -11,7 +13,6 @@ import java.io.Serializable;
 @Entity
 @Table(name = "tb_usuario")
 @Inheritance(strategy = InheritanceType.JOINED)
-
 public class Usuario implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

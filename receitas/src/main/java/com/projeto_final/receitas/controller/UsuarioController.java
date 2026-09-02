@@ -12,9 +12,13 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/")
 public class UsuarioController {
-    @Autowired
 
-    private UsuarioService service;
+    private final UsuarioService service;
+
+    @Autowired
+    public UsuarioController(UsuarioService service) {
+        this.service = service;
+    }
 
     @PostMapping(value = "/auth/register")
     public ResponseEntity<Usuario> create(@RequestBody Usuario obj) {

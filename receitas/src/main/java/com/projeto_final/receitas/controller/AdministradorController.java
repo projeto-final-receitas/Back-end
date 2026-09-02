@@ -1,7 +1,7 @@
 package com.projeto_final.receitas.controller;
 
-import com.projeto_final.receitas.service.AdministradorService;
 import com.projeto_final.receitas.entity.Administrador;
+import com.projeto_final.receitas.service.AdministradorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,9 +12,12 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/administrador")
 public class AdministradorController {
-    @Autowired
+    private final AdministradorService service;
 
-    private AdministradorService service;
+    @Autowired
+    public AdministradorController(AdministradorService service) {
+        this.service = service;
+    }
 
     @PostMapping
     public ResponseEntity<Administrador> create(@RequestBody Administrador obj) {
